@@ -187,6 +187,28 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
             {sePads.map(rendersPadRow)}
           </div>
         </div>
+
+        {/* PWA & Smartphone Tips & Troubleshooting Card */}
+        <div className="pt-4">
+          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-5 shadow-lg">
+            <h3 className="text-sm font-bold text-emerald-400 tracking-wider flex items-center gap-2 mb-2">
+              <Settings className="h-4 w-4" /> スマートフォンでのPWAインストールについて
+            </h3>
+            <div className="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <p>
+                <strong>【Chrome (Android) で「既にインストールされています」と表示される場合】</strong><br />
+                以前の古い設定や別のアプリ情報が端末内に残っていることが原因です。<br />
+                1. スマホの「設定」アプリ ＞「アプリ」一覧を開き、古い「ガイドぷらす」や「ガイド音源」アプリがある場合は<strong>アンインストール（削除）</strong>してください。<br />
+                2. Chromeの右上のメニュー（︙）＞「設定」＞「サイトの設定」＞「すべてのサイト」から <code className="bg-slate-950 px-1 py-0.5 rounded text-emerald-300">yooooohey.github.io</code> を探して<strong>「データを消去してリセット」</strong>を実行してください。<br />
+                3. 再度本ページを開き直すと、正常に「アプリをインストール」できるようになります。
+              </p>
+              <p>
+                <strong>【iPhone / iPad (Safari) の場合】</strong><br />
+                Safari下部の共有ボタン（四角から上矢印）をタップし、メニューから「ホーム画面に追加」を選択してください。
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

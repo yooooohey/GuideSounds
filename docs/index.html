@@ -12,16 +12,19 @@
     <meta name="description" content="ローカルの音声ファイルを読み込み、タップ操作で「ポン出し」ができる高性能サンプラー＆音響調整アプリ。" />
     <meta property="og:title" content="ガイド音源" />
     <meta property="og:description" content="ローカルの音声ファイルを読み込み、タップ操作で「ポン出し」ができる高性能サンプラー＆音響調整アプリ。" />
-    <script type="module" crossorigin src="./assets/index-CeDOJRzF.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CQYo33-h.css">
+    <script type="module" crossorigin src="./assets/index-BgraEP-E.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B04d7-Mb.css">
   </head>
   <body class="bg-slate-950 text-slate-100">
     <div id="root"></div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js')
-            .then(reg => console.log('Service Worker registered successfully:', reg.scope))
+          navigator.serviceWorker.register('./sw.js', { scope: './' })
+            .then(reg => {
+              console.log('Service Worker registered successfully:', reg.scope);
+              reg.update();
+            })
             .catch(err => console.error('Service Worker registration failed:', err));
         });
       }
