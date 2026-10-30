@@ -1,0 +1,6 @@
+{
+  "name": "ガイド音源",
+  "description": "ローカルの音声ファイルを読み込み、タップ操作で「ポン出し」ができる高性能サンプラー＆音響調整アプリ。",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

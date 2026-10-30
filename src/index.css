@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Redefining color variables to map precisely to the High Density design template specs */
+  --color-slate-950: #0d0f12;
+  --color-slate-900: #161a20;
+  --color-slate-850: #1c212b;
+  --color-slate-800: #13161c;
+  --color-slate-700: #2d333d;
+  --color-slate-600: #475569;
+
+  --color-blue-400: #4facfe;
+  --color-blue-500: #4facfe;
+  --color-blue-600: #0070f3;
+  --color-blue-950: #262b35;
+
+  --color-amber-400: #f97316;
+  --color-amber-500: #f97316;
+  --color-amber-950: #2a231d;
+
+  --color-emerald-400: #10b981;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  
+  --color-rose-500: #ef4444;
+  --color-rose-600: #dc2626;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
